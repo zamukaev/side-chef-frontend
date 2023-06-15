@@ -16,6 +16,9 @@ export function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInsta
             chunkFilename: "css/[name].[contenthash:8].css"
         }),
         new webpack.ProgressPlugin(),
+        new webpack.DefinePlugin({
+            __IS_DEV__: JSON.stringify(isDev),
+        }),
         isDev && new ReactRefreshWebpackPlugin(),
     ].filter(Boolean);
 }
