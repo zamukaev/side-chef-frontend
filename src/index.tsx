@@ -1,13 +1,13 @@
 import { createRoot } from 'react-dom/client';
+import { Suspense } from 'react';
 import App from './app/App';
 
-import { Suspense } from 'react';
+import './shared/config/i18n';
 
 const root = createRoot(document.getElementById('root'));
-import "./shared/config/i18n";
 
 root.render(
-    <Suspense fallback="loading">
-        <App />
-    </Suspense>
+  <Suspense fallback="loading">
+    <App />
+  </Suspense>,
 );
