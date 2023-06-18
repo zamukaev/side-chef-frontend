@@ -1,14 +1,18 @@
-import { useTranslation } from "react-i18next";
+import { Header } from "../widgets/header";
+import { BackgroundImages } from "../widgets/backgroundImages";
+
 import "./styles/index.scss";
 
-const App = () => {
-    const { t } = useTranslation();
+// TODO:
+// 1. Перенести 'Header' и 'BackgroundImages' в routes
 
-    return (
-        <div className={"app" + " light"}>
-            <h1>{t("hello world")}</h1>
-        </div>
-    );
+const App = () => {
+  return (
+    <div className={"app" + " light"}>
+      <Header />
+      <BackgroundImages />
+    </div>
+  );
 };
 
 export default App;

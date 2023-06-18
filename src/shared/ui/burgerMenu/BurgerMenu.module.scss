@@ -1,0 +1,11 @@
+.burgerMenu {
+    display:none;
+    cursor: pointer;
+}
+
+@media(width <=1350px) {
+    .burgerMenu {
+        display:block;
+        text-align: end;
+    }
+}

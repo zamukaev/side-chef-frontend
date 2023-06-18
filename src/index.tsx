@@ -1,10 +1,11 @@
-import { createRoot } from 'react-dom/client';
-import { Suspense } from 'react';
-import App from './app/App';
+import { createRoot } from "react-dom/client";
+import { Suspense } from "react";
 
-import './shared/config/i18n';
+import App from "./app/App";
 
-const root = createRoot(document.getElementById('root'));
+import "./shared/config/i18n";
+
+const root = createRoot(document.getElementById("root"));
 
 root.render(
   <Suspense fallback="loading">
