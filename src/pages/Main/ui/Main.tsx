@@ -1,7 +1,5 @@
 import { FC } from 'react'
 
-
-
 interface MainProps {
     className?: string;
 }

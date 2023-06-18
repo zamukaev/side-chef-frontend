@@ -16,5 +16,5 @@ root.render(
                 <App />
             </ThemeProvider>
         </BrowserRouter>
-    </Suspense >
+    </Suspense>
 );
