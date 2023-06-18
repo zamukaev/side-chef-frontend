@@ -8,7 +8,7 @@ import "./styles/index.scss";
 
 const App = () => {
   const { t } = useTranslation();
-  const { theme } = useTheme()
+  const { theme } = useTheme();
   return (
     <div className={`app ${theme}`}>
       <AppRouter />

@@ -3,27 +3,27 @@ import { RouteProps } from "react-router-dom";
 import { MainPage } from "pages/Main";
 
 export enum AppRoutes {
-    MAIN = 'main',
-};
+    MAIN = "main",
+}
 
 export const RoutePathPublic: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: "/",
+  [AppRoutes.MAIN]: "/",
 };
 
 export const RoutePathPrivate: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: "/",
+  [AppRoutes.MAIN]: "/",
 };
 
 export const routeConfigPublic: Record<AppRoutes, RouteProps> = {
-    [AppRoutes.MAIN]: {
-        path: RoutePathPublic[AppRoutes.MAIN],
-        element: <MainPage />,
-    },
+  [AppRoutes.MAIN]: {
+    path: RoutePathPublic[AppRoutes.MAIN],
+    element: <MainPage />,
+  },
 };
 
 export const routeConfigPrivate: Record<AppRoutes, RouteProps> = {
-    [AppRoutes.MAIN]: {
-        path: RoutePathPrivate[AppRoutes.MAIN],
-        element: <MainPage />,
-    },
+  [AppRoutes.MAIN]: {
+    path: RoutePathPrivate[AppRoutes.MAIN],
+    element: <MainPage />,
+  },
 };
