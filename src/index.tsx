@@ -1,13 +1,20 @@
-import { createRoot } from "react-dom/client";
 import { Suspense } from "react";
-import App from "./app/App";
+import { BrowserRouter } from "react-router-dom";
+import { createRoot } from "react-dom/client";
 
-import "./shared/config/i18n";
+import App from "app/App";
+import { ThemeProvider } from "app/providers/ThemeProvider";
+
+import "shared/config/i18n";
 
 const root = createRoot(document.getElementById("root"));
 
 root.render(
   <Suspense fallback="loading">
-    <App />
+    <BrowserRouter>
+      <ThemeProvider>
+        <App />
+      </ThemeProvider>
+    </BrowserRouter>
   </Suspense>,
 );
