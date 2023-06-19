@@ -1,5 +1,4 @@
 import { Header } from "../widgets/header";
-import { BackgroundImages } from "../widgets/backgroundImages";
 
 import "./styles/index.scss";
 
@@ -10,7 +9,6 @@ const App = () => {
   return (
     <div className={"app" + " light"}>
       <Header />
-      <BackgroundImages />
     </div>
   );
 };

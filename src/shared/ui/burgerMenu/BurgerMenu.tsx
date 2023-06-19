@@ -1,5 +1,16 @@
+import { FC } from "react";
+import { BiMenu } from "react-icons/bi";
+
 import styles from "./BurgerMenu.module.scss";
 
-export const BurgerMenu = () => {
-  return <div className={styles.burgerMenu}>BurgerMenu</div>;
+interface IBurgerMenuProps {
+  handleDrawerClick: () => void;
+}
+
+export const BurgerMenu: FC<IBurgerMenuProps> = ({ handleDrawerClick }) => {
+  return (
+    <div className={styles.burgerMenu} onClick={handleDrawerClick}>
+      <BiMenu size={24} />
+    </div>
+  );
 };

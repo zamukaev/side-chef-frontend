@@ -1,10 +1,10 @@
 import { BiUser, BiHeart, BiSun } from "react-icons/bi";
 
-import styles from "./HeaderNav.module.scss";
+import styles from "./HeaderNavDesktop.module.scss";
 
-export const HeaderNav = () => {
+export const HeaderNavDesktop = () => {
   return (
-    <div className={styles.headerNav}>
+    <div className={styles.headerNavDesktop}>
       <BiSun size={24} className={styles.iconIndent} />
       <BiHeart size={24} className={styles.iconIndent} />
       <BiUser size={24} />
