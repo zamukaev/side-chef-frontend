@@ -19,7 +19,7 @@ export const Search = () => {
         value={searchInput}
         onChange={changeInputHandler}
       />
-      <BiSearch size={24} />
+      <BiSearch size={24} cursor="pointer" />
     </div>
   );
 };
