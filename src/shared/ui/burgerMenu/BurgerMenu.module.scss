@@ -1,0 +1,14 @@
+.burgerMenu {
+    display:none;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media(width <=1350px) {
+    .burgerMenu {
+        align-items: center;
+        display: flex;
+        text-align: end;
+        margin-right:15px;
+    }
+}

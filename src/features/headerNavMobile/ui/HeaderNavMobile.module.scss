@@ -1,0 +1,36 @@
+.headerNavMobile {
+    display:none;
+}
+
+@media(width <=1350px) {
+    .headerNavMobile{
+        display:flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .shopppingList {
+        position: relative;
+        display:flex;
+        margin-right:30px;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 6px;
+            height: 6px;
+            background-color: #C5E4FA;
+            position: absolute;
+            top: 0;
+            right:-8px;
+            border-radius: 50px;
+        }
+    }
+
+    .avatar {
+        border-radius: 50px;
+        width:30px;
+        height:30px;
+    }
+    
+}
