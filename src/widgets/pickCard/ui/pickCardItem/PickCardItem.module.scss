@@ -1,16 +1,20 @@
 /* stylelint-disable no-descending-specificity */
 .vegetarian{
     display: flex;
-    width: 240px;
+    width: 336px;
     position: relative;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: flex-end;
     border-radius: 20px;
     align-items: center;
-
+    font-size: var(--font-size-m);
+    line-height: var(--font-line-m);
     .cardImage{
         width: 100%;
         border-radius: 20px;
+        img{
+          width: 100%;
+        }
     }
 
     .cardTitle{
@@ -23,39 +27,47 @@
     }
 
     .ingredientsBlock{
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 0%;
         position: absolute;
-        padding: 0 40px;
-        background: rgb(0 0 0 / 30%);
-        box-shadow: 0 -10px 4px rgb(0 0 0 / 30%);
+        padding: 0 60px;
+        background: rgb(0 0 0 / 25%);
+        box-shadow: 0 -10px 4px rgb(0 0 0 / 25%);
         border-radius: 0 0 20px 20px;
         bottom: 0;
         opacity: 0;
         visibility: hidden;
-        transition: all ease-out 0.3s;
+        transition: all ease-out 0.5s;
 
         .ingredients{
+            align-self: flex-end;
             text-align: center;
+            margin-bottom: 0px;
             font-size: var(--font-size-s);
             line-height: var(--font-line-s);
             color: var(--light-gray);
+            transition: all ease-out 0.5s;
         }
     }
 
     &:hover{
         .ingredientsBlock{
-            height: 50%;
+            height: 30%;
             opacity: 1;
             visibility: visible;
-            transition: all ease-out 0.3s;
+            transition: all ease-out 0.5s;
+            .ingredients{
+              transition: all ease-out 0.5s;
+              margin-bottom: 15px;
+            }
         }
 
         .cardTitle{
-            bottom: 60px;
-            transition: all ease-out 0.3s;
+            bottom: 47px;
+            transition: all ease-out 0.5s;
         }
     }
 
@@ -85,7 +97,8 @@
 
 .trending{
     display: flex;
-    max-width: 180px;
+    width: 240px;
+    height: 240px;
     position: relative;
     flex-direction: column;
     justify-content: flex-start;
@@ -93,8 +106,8 @@
     border-radius: 20px;
 
     .cardImage{
-        width: 180px;
-        height:200px;
+        width: 100%;
+        height: 100%;
         border-radius:20px;
   
         img{
@@ -126,10 +139,12 @@
         bottom: 0;
         opacity: 0;
         visibility: hidden;
-        transition: all ease-out 0.3s;
+        transition: all ease-out 0.5s;
 
         .ingredients{
+            align-self: flex-end;
             text-align: center;
+            margin-bottom: 0px;
             font-size: var(--font-size-s);
             line-height: var(--font-line-s);
             color: var(--light-gray);
@@ -138,15 +153,19 @@
 
     &:hover{
         .ingredientsBlock{
-            height: 40%;
+            height: 30%;
             opacity: 1;
             visibility: visible;
-            transition: all ease-out 0.3s;
+            transition: all ease-out 0.5s;
+            .ingredients{
+              transition: all ease-out 0.5s;
+              margin-bottom: 15px;
+        }
         }
  
         .cardTitle{
-            bottom: 60px;
-            transition: all ease-out 0.3s;
+            bottom: 47px;
+            transition: all ease-out 0.5s;
         }
     }
 

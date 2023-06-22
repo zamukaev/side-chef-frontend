@@ -24,13 +24,24 @@ const withSlider = <P extends PickCardProps>(
   Component: ComponentType<P>,
 ): ComponentType<SliderProps & P> => {
   const Slider = (props: SliderProps & P) => {
-    const { slidesPerView, spaceBetween, pick } = props;
+    const { slidesPerView, spaceBetween, pick, cardType } = props;
 
     return (
       <Swiper
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
-        centeredSlides={false}
+        // centeredSlides
+        breakpoints={{
+          1200: {
+            slidesPerView: cardType === "vegetarian" ? 4 : 5,
+          },
+          640: {
+            slidesPerView: cardType === "vegetarian" ? 2 : 3,
+          },
+          340: {
+            slidesPerView: cardType === "vegetarian" ? 2 : 3,
+          },
+        }}
         autoplay={{
           delay: 2500,
           disableOnInteraction: false,
@@ -43,7 +54,7 @@ const withSlider = <P extends PickCardProps>(
             <Component {...props} />
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper >
     );
   };
 
