@@ -1,0 +1,15 @@
+.logo {
+    display:flex;
+    align-items:center;
+    cursor: pointer;
+  
+    & img {
+        width:38px;
+    }
+}
+
+.text {
+    margin-left:12px;
+    letter-spacing: 2px;
+}
+

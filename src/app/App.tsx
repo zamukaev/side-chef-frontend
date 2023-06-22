@@ -16,6 +16,7 @@ const App = () => {
   );
   const { t } = useTranslation();
   const { theme } = useTheme();
+
   return (
     <div className={`app ${theme}`}>
       <AppRouter />
