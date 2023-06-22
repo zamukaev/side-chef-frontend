@@ -1,16 +1,29 @@
+import path from "path";
 import webpack from "webpack";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const { isDev } = options;
+
+  const babelLoader = {
+    test: /\.(js|jsx|tsx|ts)$/,
+    exclude: /node_modules/,
+    use: {
+      loader: "babel-loader",
+      options: {
+        presets: ["@babel/preset-env"],
+      },
+    },
+  };
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
     exclude: /node_modules/,
   };
+
   const scssLoader = {
-    test: /\.s[ac]ss$/i,
+    test: /\.(css|s[ac]ss)$/i,
     use: [
       // Creates `style` nodes from JS strings
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
@@ -43,10 +56,16 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     use: ["@svgr/webpack"],
   };
 
+  const urlLoader = {
+    test: /\.(png|woff|woff2|eot|ttf|svg)$/,
+    use: ["url-loader?limit=100000"],
+  };
   return [
-    typescriptLoader,
-    scssLoader,
-    fileLoader,
     svgLoader,
+    fileLoader,
+    urlLoader,
+    scssLoader,
+    babelLoader,
+    typescriptLoader,
   ];
 }

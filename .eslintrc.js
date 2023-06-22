@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
+
     quotes: [2, "double"],
     "linebreak-style": [0, "windows"],
     "react/jsx-indent": [2, 2],

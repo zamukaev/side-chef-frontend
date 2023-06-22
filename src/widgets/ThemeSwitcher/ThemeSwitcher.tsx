@@ -1,7 +1,7 @@
 import { FC } from "react";
 
 import { useTheme } from "app/providers/ThemeProvider";
-import { Button, ThemeButton } from "shared/ui/Button/Button";
+import { Button, ThemeButton } from "shared/ui/button/Button";
 
 interface ThemeSwitcherProps {
     className?: string;
