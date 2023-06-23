@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import { ThemeSwitcher } from "widgets/ThemeSwitcher/ThemeSwitcher";
+import { ThemeSwitcher } from "widgets/themeSwitcher/ThemeSwitcher";
 import { useTheme } from "./providers/ThemeProvider";
 import { AppRouter } from "./providers/router";
 
