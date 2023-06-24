@@ -1,6 +1,7 @@
-import path from "path";
 import webpack from "webpack";
+
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
@@ -16,6 +17,7 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
       },
     },
   };
+
   const typescriptLoader = {
     test: /\.tsx?$/,
     use: "ts-loader",
@@ -25,7 +27,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   const scssLoader = {
     test: /\.(css|s[ac]ss)$/i,
     use: [
-      // Creates `style` nodes from JS strings
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
       { // Translates CSS into CommonJS
         loader: "css-loader",
@@ -38,7 +39,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
         },
 
       },
-      // Compiles Sass to CSS
       "sass-loader",
     ],
   };
@@ -60,6 +60,12 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     test: /\.(png|woff|woff2|eot|ttf|svg)$/,
     use: ["url-loader?limit=100000"],
   };
+
+  const jsonLoader = {
+    test: /\.json$/,
+    loader: "json-loader",
+  };
+
   return [
     svgLoader,
     fileLoader,
@@ -67,5 +73,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
     scssLoader,
     babelLoader,
     typescriptLoader,
+    jsonLoader,
   ];
 }

@@ -1,15 +1,9 @@
 import { FC } from "react";
 import { Link } from "react-router-dom";
 
+import { PickCardItemProps } from "shared/types";
+
 import styles from "./pickCardItem.module.scss";
-
-export type CardItemType = "vegetarian" | "trending";
-
-interface PickCardItemProps {
-  className?: string;
-  cardType?: CardItemType;
-  pick?: any;
-}
 
 export const PickCardItem: FC<PickCardItemProps> = (props) => {
   const { className, cardType, pick } = props;
@@ -17,7 +11,7 @@ export const PickCardItem: FC<PickCardItemProps> = (props) => {
   return (
     <Link to="/recipe/1" className={`${styles[cardType]} ${className}`}>
       <div className={styles.cardImage}>
-        <img src="./assets/1.png" alt="" />
+        <img src={pick.image} alt="" />
       </div>
       <h3 className={styles.cardTitle}>
         Onion Salad with Feta Cheese

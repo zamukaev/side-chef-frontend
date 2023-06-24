@@ -1,5 +1,11 @@
-import { FC } from "react";
-import { PickCard } from "widgets/pickCard/ui/pickCard/PickCard";
+import { FC, useEffect, useState } from "react";
+
+import { IRecipes, IVegetarianPicsTypes } from "shared/types";
+import { PickCard } from "widgets/pickCard";
+
+import { Picks } from "db";
+
+import axios from "axios";
 
 import styles from "./Main.module.scss";
 
@@ -10,6 +16,16 @@ interface MainProps {
 const Main: FC<MainProps> = (props) => {
   const { className } = props;
 
+  const [vegetarianPicks, setVegetarianPicks] = useState<IVegetarianPicsTypes[]>([]);
+
+  const getVegetarianPicks = async () => {
+    // const { data } = await axios.get<IRecipes>("https://side-chef-api.vercel.app/api/vegetarian");
+    setVegetarianPicks(Picks);
+  };
+
+  useEffect(() => {
+    getVegetarianPicks();
+  }, []);
   return (
     <main className={styles.main}>
       <PickCard
@@ -17,17 +33,17 @@ const Main: FC<MainProps> = (props) => {
         headline="Our Vegetarian Picks"
         slidesPerView={4}
         spaceBetween={10}
-        pick={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+        picks={Picks}
       />
       <PickCard
         cardType="trending"
         headline="trending"
         spaceBetween={10}
         slidesPerView={5}
-        pick={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
+        picks={Picks}
       />
-    </main>
 
+    </main>
   );
 };
 

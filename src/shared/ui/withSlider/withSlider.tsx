@@ -1,36 +1,21 @@
-import { ComponentType, ReactNode } from "react";
+import { ComponentType } from "react";
 
 import { Autoplay, Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/swiper.css";
 
-export type CardType = "vegetarian" | "trending";
+import { PickCardProps, SliderProps } from "shared/types";
 
-interface PickCardProps {
-  className?: string;
-  cardType?: CardType;
-  headline?: string;
-  slidesPerView?: number;
-  spaceBetween?: number
-  pick?: any;
-}
-
-interface SliderProps extends PickCardProps {
-  children?: ReactNode;
-}
-
-const withSlider = <P extends PickCardProps>(
+export const withSlider = <P extends PickCardProps>(
   Component: ComponentType<P>,
 ): ComponentType<SliderProps & P> => {
   const Slider = (props: SliderProps & P) => {
-    const { slidesPerView, spaceBetween, pick, cardType } = props;
+    const { slidesPerView, spaceBetween, picks, cardType } = props;
 
     return (
       <Swiper
         slidesPerView={slidesPerView}
         spaceBetween={spaceBetween}
-        // centeredSlides
         breakpoints={{
           1200: {
             slidesPerView: cardType === "vegetarian" ? 4 : 5,
@@ -49,16 +34,16 @@ const withSlider = <P extends PickCardProps>(
         navigation
         modules={[Autoplay, Pagination, Navigation]}
       >
-        {pick?.map((item: any, i: any) => (
-          <SwiperSlide key={item}>
-            <Component {...props} />
+
+        {picks.map((pick: any) => (
+          <SwiperSlide key={pick.id}>
+            <Component pick={pick} {...props} />
           </SwiperSlide>
         ))}
-      </Swiper >
+
+      </Swiper>
     );
   };
 
   return Slider;
 };
-
-export default withSlider;

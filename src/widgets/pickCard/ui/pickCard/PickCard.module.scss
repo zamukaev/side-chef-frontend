@@ -6,10 +6,6 @@
         margin-bottom: 0;
     }
 
-    @media (width <=481px) {
-        padding: 0 40px;
-    }
-
     .title{
         margin-bottom: 20px;
         font-size: var(--font-line-m);
@@ -26,6 +22,10 @@
         .cardItem{
             margin: 10px;  
         }
+    }
+
+    @media (width <=481px) {
+        padding: 0 40px;
     }
 }
 
