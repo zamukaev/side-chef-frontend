@@ -16,7 +16,9 @@ interface MainProps {
 const Main: FC<MainProps> = (props) => {
   const { className } = props;
 
-  const [vegetarianPicks, setVegetarianPicks] = useState<IVegetarianPicsTypes[]>([]);
+  const [vegetarianPicks, setVegetarianPicks] = useState<
+    IVegetarianPicsTypes[]
+  >([]);
 
   const getVegetarianPicks = async () => {
     // const { data } = await axios.get<IRecipes>("https://side-chef-api.vercel.app/api/vegetarian");
@@ -37,12 +39,11 @@ const Main: FC<MainProps> = (props) => {
       />
       <PickCard
         cardType="trending"
-        headline="trending"
-        spaceBetween={10}
+        headline="Trending"
+        spaceBetween={40}
         slidesPerView={5}
         picks={Picks}
       />
-
     </main>
   );
 };

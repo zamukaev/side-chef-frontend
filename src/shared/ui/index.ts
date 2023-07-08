@@ -1,8 +1,4 @@
-import { Button, ThemeButton } from "./button/Button";
+import { Button, ThemeButton } from "./Button/Button";
 import { withSlider } from "./withSlider/withSlider";
 
-export {
-  Button,
-  withSlider,
-  ThemeButton,
-};
+export { Button, withSlider, ThemeButton };

@@ -3,3 +3,9 @@
     flex-direction: column;
     align-items: center;
 }
+
+@media (width <=1450px) {
+    .main {
+        margin:0 10px;
+    }
+}

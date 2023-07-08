@@ -8,7 +8,7 @@
 
     .title{
         margin-bottom: 20px;
-        font-size: var(--font-line-m);
+        font-size: 20px;
         line-height: var(--font-line-m);
     }
 
@@ -23,11 +23,10 @@
             margin: 10px;  
         }
     }
-
-    @media (width <=481px) {
-        padding: 0 40px;
-    }
 }
 
-
-
+@media(width <=425px) {
+    .pickCards {
+        margin-bottom: 30px;
+    }
+}
