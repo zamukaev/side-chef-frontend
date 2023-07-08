@@ -42,6 +42,11 @@ module.exports = {
     "object-curly-newline": "off",
     "no-useless-concat": "off",
     "object-shorthand": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "no-confusing-arrow": "off",
+    "implicit-arrow-linebreak": "off",
+    "function-paren-newline": "off",
   },
   globals: {
     __IS_DEV__: true,

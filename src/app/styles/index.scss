@@ -3,11 +3,16 @@
 @import "./themes/normal";
 @import "./themes/dark";
 
+body {
+    background: #fbfbfb;
+}
+
 .app {
     font-family: var(--font-family-main);
     font-size: var(--font-size-m);
     line-height: var(--font-line-m);
-    background: var(--bg-color);
+
+    // background: var(--bg-color);
     min-height: 100vh;
     color: var(--primary-color);
 }
@@ -15,4 +20,12 @@
 .page-wrapper{
     max-width: 1400px;
     margin: 0 auto;
+    margin-top:-30px;
+    max-width:1400px;
+    margin: 30px auto;
+}
+
+
+.menu-open {
+    overflow: hidden;
 }

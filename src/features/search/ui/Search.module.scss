@@ -1,0 +1,33 @@
+.search {
+    background:#F5F5F5;
+    padding:12px 22px;
+    border-radius: 30px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:600px;
+    transition: box-shadow 0.3s ease;
+
+    &_focused {
+        box-shadow: 0 0 7px -2px rgb(34 60 80 / 20%);
+        transition: box-shadow 0.3s ease;
+    }
+
+    & input {
+        background:none;
+        width:100%;
+        outline:none;
+
+        &::placeholder {
+            color:#AFAFAF;
+        }
+    }
+}
+
+
+@media(width <=1350px) {
+    .search {
+        width:100%;
+        margin-top:20px;
+    }
+}

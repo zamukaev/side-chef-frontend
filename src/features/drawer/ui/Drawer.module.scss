@@ -1,0 +1,139 @@
+.blur {
+    top: 0;
+    width:0;
+    height: 100vh;
+    backdrop-filter: blur(0);
+    position: absolute;
+    transition: all 0.45s;
+    left: 0;
+    z-index: 5;
+}
+
+.blurOpen {
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(2px);
+    position: absolute;
+    transition: all 0.45s;
+    left: 0 ;
+    z-index: 5;
+}
+
+.container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background: #fff;
+    transform: translate(-100%);
+    transition: all 0.45s;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25%;
+    font-family:  Roboto, sans-serif;
+
+    @media (width <= 830px) {
+        padding-left: 20%;
+    }
+
+    @media (width <= 600px) {
+        padding-left: 10%;
+    }
+
+    @media (width <= 450px) {
+        padding-left: 5%;
+    }
+}
+
+.containerOpen {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    z-index: 5;
+    background: #fff;
+    transform:translate(-40%);
+    transition: all 0.45s;
+    display: flex;
+    flex-direction: column;
+    padding-left: 40%;
+    font-family:  Roboto, sans-serif;
+    box-shadow: 0 0 2em rgb(0 0 0 / 12%);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.nav {
+    &_item {
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+        color:#282828;
+        border-top: 0.5px solid #E6E6E6;
+        padding: 10px;
+
+        &__icon {
+            transition: all 300ms;
+        }
+        
+        &__iconRotate {
+            transform: rotate(90deg);
+            transition: all 300ms;
+        }
+
+        &:first-child {
+            border-top:none;
+        } 
+    }
+
+    &_menuList {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 1s ease;
+        font-weight: 500;
+        font-size: 12px;
+
+        &__expanded {
+            max-height: 400px;
+            overflow: hidden;
+            transition: max-height 1s ease;
+            font-weight: 500;
+            font-size: 12px; 
+        }
+
+        &__item {
+            display:flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-left:9px;
+
+            & svg {
+                margin-right:10px;
+            }
+        }
+
+        &__itemActive {
+            display:flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-left:6px;
+            border-left: 3px solid #85ccff;
+         
+            & svg {
+                margin-right:10px;
+            }
+        }
+    }
+}
