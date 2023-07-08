@@ -47,6 +47,8 @@ module.exports = {
     "no-confusing-arrow": "off",
     "implicit-arrow-linebreak": "off",
     "function-paren-newline": "off",
+    "operator-linebreak": "off",
+    "no-param-reassign": "off",
   },
   globals: {
     __IS_DEV__: true,
