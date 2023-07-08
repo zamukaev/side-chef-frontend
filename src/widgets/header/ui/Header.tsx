@@ -1,37 +1,41 @@
 import { useState, useRef, useEffect } from "react";
 
+import { toggleBurgerMenuModal } from "entities/modals";
+import { useAppDispatch } from "app/store";
+import { useOnClickOutside, useTypedSelector } from "shared/hooks";
 import { HeaderNavDesktop } from "../../../features/headerNavDesktop";
 import { HeaderNavMobile } from "../../../features/headerNavMobile";
 import { Search } from "../../../features/search";
 import { BackgroundImages } from "../../backgroundImages";
 import { Drawer } from "../../../features/drawer";
 import { Logo } from "../../../shared/ui";
-import useOnClickOutside from "../../../shared/hooks/onClickOutside";
 
 import styles from "./Header.module.scss";
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const { burgerMenuModal } = useTypedSelector((state) => state.modals);
+
+  const dispatch = useAppDispatch();
 
   const node = useRef(null);
 
   useOnClickOutside(node, () => {
-    if (isOpen) {
-      setIsOpen(!isOpen);
+    if (burgerMenuModal) {
+      dispatch(toggleBurgerMenuModal());
     }
   });
 
   const handleDrawerClick = () => {
-    setIsOpen(!isOpen);
+    dispatch(toggleBurgerMenuModal());
   };
 
   useEffect(() => {
-    if (isOpen) {
+    if (burgerMenuModal) {
       document.body.classList.add("menu-open");
     } else {
       document.body.classList.remove("menu-open");
     }
-  }, [isOpen]);
+  }, [burgerMenuModal]);
 
   return (
     <header className={styles.header}>
@@ -40,7 +44,7 @@ export const Header = () => {
       <Search />
       <HeaderNavDesktop />
       <BackgroundImages />
-      <Drawer isOpen={isOpen} node={node} />
+      <Drawer node={node} isOpen={burgerMenuModal} />
     </header>
   );
 };
