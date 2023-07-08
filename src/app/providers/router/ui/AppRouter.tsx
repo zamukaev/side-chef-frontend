@@ -10,6 +10,11 @@ function AppRouter() {
       <Header />
       <Routes>
         {Object.values(routeConfigPublic).map(({ path, element }) => (
+          <Route
+            key={path}
+            path={path}
+            element={(<div className="page-wrapper">{element}</div>)}
+          />
           <Route key={path} path={path} element={element} />
         ))}
       </Routes>
