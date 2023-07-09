@@ -6,12 +6,12 @@ export const BackgroundImages = () => {
       <img
         className={styles.backgroundLeftFruit}
         alt="backgroundLeftFruit"
-        src="./backgroundLeftFruit.png"
+        src="./assets/backgroundLeftFruit.png"
       />
       <img
         className={styles.backgroundRightFruit}
         alt="backgroundRightFruit"
-        src="./backgroundRightFruit.png"
+        src="./assets/backgroundRightFruit.png"
       />
     </div>
   );

@@ -13,14 +13,14 @@ export const PickCardItem: FC<PickCardItemProps> = (props) => {
       <div className={styles.cardImage}>
         <img src={pick.image} alt="" />
       </div>
-      <h3 className={styles.cardTitle}>
-        Onion Salad with Feta Cheese
-      </h3>
+      <h3 className={styles.cardTitle}>Onion Salad with Feta Cheese</h3>
       <div className={styles.ingredientsBlock}>
         <p className={styles.ingredients}>
-          mozzarella pearls, baby spinach, extra-virgin olive oil, salt and 7 more
+          mozzarella pearls, baby spinach, extra-virgin olive oil, salt and 7
+          more
         </p>
       </div>
+      <div className={styles.filter}></div>
     </Link>
   );
 };
