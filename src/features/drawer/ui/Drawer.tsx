@@ -112,6 +112,9 @@ export const Drawer: FC<IDrawerProps> = ({ node }) => {
             )}
           </AnimatePresence>
         </div>
+        <div className={styles.footerImage}>
+          <img alt="burgerMenuImage" src="./assets/burderMenuImage.png" />
+        </div>
       </div>
     </>,
     document.body,
