@@ -1,12 +1,17 @@
-import React, { useMemo, useRef } from "react";
+import { useMemo, useRef } from "react";
 
-import SwiperCore, { Navigation } from "swiper";
+import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import { SlArrowLeft, SlArrowRight } from "react-icons/Sl";
+
+import { CuisinesSliderCard } from "shared/ui";
 
 import styles from "./CuisinesSlider.module.scss";
 
 import "swiper/swiper.css";
 import "swiper/css/navigation";
+import { data } from "./cuisinesSliderData";
 
 export const CuisinesSlider = () => {
   const navigationPrevRef = useRef(null);
@@ -23,64 +28,50 @@ export const CuisinesSlider = () => {
 
   return (
     <div className={styles.slider}>
-      <Swiper
-        spaceBetween={20}
-        slidesPerView={7}
-        modules={[Navigation]}
-        loop
-        navigation={{
-          prevEl: navigationPrevRef.current,
-          nextEl: navigationNextRef.current,
-        }}
-      >
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img alt="" src="./assets/image.png" />
-        </SwiperSlide>
-      </Swiper>
       <button
         ref={navigationPrevRef}
         className={navigationPrevClasses.join(" ")}
       >
-        Prev
+        <SlArrowLeft />
       </button>
+      <Swiper
+        spaceBetween={20}
+        modules={[Navigation]}
+        slidesPerView={7}
+        // loop
+        navigation={{
+          prevEl: navigationPrevRef.current,
+          nextEl: navigationNextRef.current,
+        }}
+        breakpoints={{
+          1000: {
+            slidesPerView: 7,
+          },
+          860: {
+            slidesPerView: 5,
+            spaceBetween: 0,
+          },
+          650: {
+            slidesPerView: 4,
+            spaceBetween: 0,
+          },
+          0: {
+            slidesPerView: 3,
+            spaceBetween: 0,
+          },
+        }}
+      >
+        {data.map((cuisine) => (
+          <SwiperSlide key={cuisine.id}>
+            <CuisinesSliderCard cuisine={cuisine} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
       <button
         ref={navigationNextRef}
         className={navigationNextClasses.join(" ")}
       >
-        Next
+        <SlArrowRight />
       </button>
     </div>
   );
