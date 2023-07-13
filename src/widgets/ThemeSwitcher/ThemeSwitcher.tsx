@@ -8,8 +8,7 @@ interface ThemeSwitcherProps {
   className?: string;
 }
 
-export const ThemeSwitcher: FC<ThemeSwitcherProps> = (props) => {
-  const { className } = props;
+export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
   const { toggleTheme } = useTheme();
 
   return (

@@ -1,5 +1,3 @@
-import React from "react";
-
 import { CuisinesSlider } from "features/cuisinesSlider";
 
 import styles from "./Cuisines.module.scss";

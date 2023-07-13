@@ -1,44 +1,38 @@
 import { useMemo, useRef } from "react";
-
 import { Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import { SlArrowLeft, SlArrowRight } from "react-icons/Sl";
 
 import { CuisinesSliderCard } from "shared/ui";
 
-import styles from "./CuisinesSlider.module.scss";
-
-import "swiper/swiper.css";
-import "swiper/css/navigation";
 import { data } from "./cuisinesSliderData";
 
+import styles from "./CuisinesSlider.module.scss";
+import "swiper/swiper.css";
+import "swiper/css/navigation";
+
 export const CuisinesSlider = () => {
-  const navigationPrevRef = useRef(null);
-  const navigationNextRef = useRef(null);
+  const navigationPrevRef = useRef<HTMLButtonElement>(null);
+  const navigationNextRef = useRef<HTMLButtonElement>(null);
 
   const navigationPrevClasses = useMemo(
-    () => [styles.navigationButton, styles.prevButton],
+    () => [styles.navigationButton, styles.prevButton].join(" "),
     [],
   );
   const navigationNextClasses = useMemo(
-    () => [styles.navigationButton, styles.nextButton],
+    () => [styles.navigationButton, styles.nextButton].join(" "),
     [],
   );
 
   return (
     <div className={styles.slider}>
-      <button
-        ref={navigationPrevRef}
-        className={navigationPrevClasses.join(" ")}
-      >
+      <button ref={navigationPrevRef} className={navigationPrevClasses}>
         <SlArrowLeft />
       </button>
       <Swiper
         spaceBetween={20}
         modules={[Navigation]}
         slidesPerView={7}
-        // loop
         navigation={{
           prevEl: navigationPrevRef.current,
           nextEl: navigationNextRef.current,
@@ -67,10 +61,7 @@ export const CuisinesSlider = () => {
           </SwiperSlide>
         ))}
       </Swiper>
-      <button
-        ref={navigationNextRef}
-        className={navigationNextClasses.join(" ")}
-      >
+      <button ref={navigationNextRef} className={navigationNextClasses}>
         <SlArrowRight />
       </button>
     </div>

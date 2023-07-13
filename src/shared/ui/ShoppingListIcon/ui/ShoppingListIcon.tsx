@@ -8,8 +8,6 @@ import { toggleShoppingListModal } from "entities/modals";
 import styles from "./ShoppingListIcon.module.scss";
 
 export const ShoppingListIcon = () => {
-  const { burgerMenuModal } = useTypedSelector((state) => state.modals);
-
   const dispatch = useAppDispatch();
 
   const handleClick = () => {

@@ -49,6 +49,7 @@ module.exports = {
     "function-paren-newline": "off",
     "operator-linebreak": "off",
     "no-param-reassign": "off",
+    "react/self-closing-comp": "off",
   },
   globals: {
     __IS_DEV__: true,

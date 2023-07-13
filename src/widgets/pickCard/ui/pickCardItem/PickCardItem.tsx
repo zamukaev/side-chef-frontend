@@ -5,9 +5,11 @@ import { PickCardItemProps } from "shared/types";
 
 import styles from "./pickCardItem.module.scss";
 
-export const PickCardItem: FC<PickCardItemProps> = (props) => {
-  const { className, cardType, pick } = props;
-
+export const PickCardItem: FC<PickCardItemProps> = ({
+  className,
+  cardType,
+  pick,
+}) => {
   return (
     <Link to="/recipe/1" className={`${styles[cardType]} ${className}`}>
       <div className={styles.cardImage}>
