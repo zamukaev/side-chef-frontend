@@ -1,11 +1,9 @@
 {
   "extends": "stylelint-config-standard-scss",
   "rules": {
-    "indentation": [4],
-    "selector-class-pattern": null,
-    "declaration-property-value-disallowed-list": {
-      "margin": ["150px"]
-    },
-    "declaration-block-trailing-semicolon": "always"
+    "indentation": [
+      4
+    ],
+    "selector-class-pattern": null
   }
 }

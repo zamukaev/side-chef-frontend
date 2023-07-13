@@ -1,0 +1,32 @@
+.pickCards{
+    width:100%;
+    margin-bottom: 50px;
+
+    &:last-child{
+        margin-bottom: 0;
+    }
+
+    .title{
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: var(--font-line-m);
+    }
+
+    .card{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: -10px;
+        flex-wrap: wrap;
+
+        .cardItem{
+            margin: 10px;  
+        }
+    }
+}
+
+@media(width <=425px) {
+    .pickCards {
+        margin-bottom: 30px;
+    }
+}
