@@ -1,4 +1,4 @@
-import { Autoplay, Navigation, Pagination } from "swiper";
+import { Autoplay, Pagination } from "swiper";
 
 import { CardType } from "shared/types";
 
@@ -33,8 +33,7 @@ export const setParams = (
   return {
     slidesPerView,
     spaceBetween,
-    navigation: true,
-    modules: [Autoplay, Pagination, Navigation],
+    modules: [Autoplay, Pagination],
     autoplay: {
       delay: autoplayDelay,
       disableOnInteraction: false,

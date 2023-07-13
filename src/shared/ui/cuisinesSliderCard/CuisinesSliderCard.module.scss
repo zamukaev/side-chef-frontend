@@ -1,0 +1,48 @@
+.cuisine {
+    cursor: pointer;
+}
+
+.name {
+    position: relative;
+    top: -55px;
+    color: rgb(255 255 255);
+    font-size: 14px;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+@media(width <=480px) {
+    .image {
+        width:90px;
+    }
+
+    .name {
+        font-size:12px;
+        top: -50px;
+    }
+}
+
+
+@media(width <=420px) {
+    .image {
+        width:80px;
+    }
+
+    .name {
+        font-size:10px;
+        top: -46px;
+    }
+}
+
+@media(width <=380px) {
+    .image {
+        width:70px;
+    }
+
+    .name {
+        top: -41px;
+    }
+}
+
+

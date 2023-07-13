@@ -1,11 +1,10 @@
-import { ShoppingList } from "features/shoppingList/ShoppingList";
-import { Suspense, useRef, useState } from "react";
+import { Suspense } from "react";
 import { Route, Routes } from "react-router-dom";
 
 import { routeConfigPublic } from "shared/config/configRoute";
-import useOnClickOutside from "shared/hooks/onClickOutside";
 import { ShoppingListIcon } from "shared/ui/ShoppingListIcon";
 import { Header } from "widgets/header";
+import { ShoppingList } from "features/shoppingList/ShoppingList";
 
 function AppRouter() {
   return (

@@ -1,0 +1,95 @@
+.slider {
+    margin-top:30px;
+    max-width:950px;
+    display:flex;
+    align-items: center;
+}
+
+.prevButton {
+    cursor: pointer;
+    display:flex;
+    padding:15px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
+    background:none !important;
+    margin-right:15px;
+    margin-top:-8px;
+    transition: all 0.3s;
+
+    &:hover {
+        color:black;
+        transition: all 0.3s;
+        box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
+    }
+}
+
+.nextButton {
+    cursor: pointer;
+    display:flex;
+    padding:15px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px 0 rgb(0 0 0 / 10%);
+    background:none !important;
+    margin-left:15px; 
+    margin-top:-8px;
+    transition: all 0.3s;
+
+    &:hover {
+        color:black;
+        transition: all 0.3s;
+        box-shadow: 0 0 5px 1px rgb(0 0 0 / 10%);
+    }
+}
+
+@media (width <=1000px) {
+    .slider {
+        max-width:800px;
+    }
+}
+
+@media (width <=860px) {
+    .slider {
+        max-width:600px;
+    }
+}
+
+@media (width <=650px) {
+    .slider {
+        max-width:500px;
+    }
+}
+
+@media (width <=530px) {
+    .slider {
+        max-width:450px;
+    }
+}
+
+@media (width <=480px) {
+    .slider {
+        max-width:400px;
+    }
+
+    .prevButton{
+        margin-top:-13px;
+        margin-right:0;
+    }
+
+    .nextButton {
+        margin-top:-13px;
+        margin-left:0;
+    }
+}
+
+@media (width <=420px) {
+    .slider {
+        width:360px;
+    }
+}
+
+@media (width <=380px) {
+    .slider {
+        width:320px;
+        margin-top:25px;
+    }
+}

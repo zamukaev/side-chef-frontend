@@ -1,14 +1,16 @@
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect } from "react";
+
+import { useAppDispatch } from "app/store";
 
 import { toggleBurgerMenuModal } from "entities/modals";
-import { useAppDispatch } from "app/store";
 import { useOnClickOutside, useTypedSelector } from "shared/hooks";
+import { Logo } from "../../../shared/ui";
 import { HeaderNavDesktop } from "../../../features/headerNavDesktop";
 import { HeaderNavMobile } from "../../../features/headerNavMobile";
 import { Search } from "../../../features/search";
-import { BackgroundImages } from "../../backgroundImages";
 import { Drawer } from "../../../features/drawer";
-import { Logo } from "../../../shared/ui";
+
+import { BackgroundImages } from "../../backgroundImages";
 
 import styles from "./Header.module.scss";
 
@@ -17,7 +19,7 @@ export const Header = () => {
 
   const dispatch = useAppDispatch();
 
-  const node = useRef(null);
+  const node = useRef<HTMLDivElement>(null);
 
   useOnClickOutside(node, () => {
     if (burgerMenuModal) {

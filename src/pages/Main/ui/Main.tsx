@@ -2,8 +2,8 @@ import { FC, useEffect, useState } from "react";
 
 import { IRecipes, IVegetarianPicsTypes } from "shared/types";
 import { PickCard } from "widgets/pickCard";
-
 import { Picks } from "db";
+import { Cuisines } from "widgets/cuisines";
 
 import axios from "axios";
 
@@ -30,6 +30,7 @@ const Main: FC<MainProps> = (props) => {
   }, []);
   return (
     <main className={styles.main}>
+      <Cuisines />
       <PickCard
         cardType="vegetarian"
         headline="Our Vegetarian Picks"
