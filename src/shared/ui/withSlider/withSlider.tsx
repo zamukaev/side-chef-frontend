@@ -28,7 +28,7 @@ export const withSlider = <P extends PickCardProps>(
           },
         }}
         autoplay={{
-          delay: 2500,
+          delay: cardType === "trending" ? 1500 : 2500,
           disableOnInteraction: false,
         }}
         navigation
