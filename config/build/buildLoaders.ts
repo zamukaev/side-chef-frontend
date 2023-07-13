@@ -1,7 +1,7 @@
 import webpack from "webpack";
 
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
-
+import ReactRefreshTypeScript from "react-refresh-typescript";
 import { BuildOptions } from "./types/config";
 
 export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
@@ -20,15 +20,24 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
 
   const typescriptLoader = {
     test: /\.tsx?$/,
-    use: "ts-loader",
+
     exclude: /node_modules/,
+    use: {
+      loader: require.resolve("ts-loader"),
+      options: {
+        getCustomTransformers: () => ({
+          before: [isDev && ReactRefreshTypeScript()].filter(Boolean),
+        }),
+        transpileOnly: isDev,
+      },
+    },
   };
 
   const scssLoader = {
     test: /\.(css|s[ac]ss)$/i,
     use: [
       isDev ? "style-loader" : MiniCssExtractPlugin.loader,
-      { // Translates CSS into CommonJS
+      {
         loader: "css-loader",
         options: {
           modules: {
@@ -37,7 +46,6 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
               : "[hash:base64:8]",
           },
         },
-
       },
       "sass-loader",
     ],
@@ -67,12 +75,12 @@ export function buildLoaders(options: BuildOptions): webpack.RuleSetRule[] {
   };
 
   return [
+    babelLoader,
+    typescriptLoader,
+    scssLoader,
     svgLoader,
     fileLoader,
     urlLoader,
-    scssLoader,
-    babelLoader,
-    typescriptLoader,
     jsonLoader,
   ];
 }
