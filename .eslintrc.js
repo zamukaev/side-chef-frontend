@@ -14,9 +14,8 @@ module.exports = {
   },
   plugins: ["react", "@typescript-eslint"],
   rules: {
-
     quotes: [2, "double"],
-    "linebreak-style": [0, "windows"],
+    "linebreak-style": "off",
     "react/jsx-indent": [2, 2],
     "react/jsx-indent-props": [2, 2],
     indent: [2, 2],
@@ -42,8 +41,15 @@ module.exports = {
     "arrow-body-style": "off",
     "object-curly-newline": "off",
     "no-useless-concat": "off",
+    "object-shorthand": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "jsx-a11y/no-static-element-interactions": "off",
+    "no-confusing-arrow": "off",
+    "implicit-arrow-linebreak": "off",
+    "function-paren-newline": "off",
+    "operator-linebreak": "off",
+    "no-param-reassign": "off",
+    "react/self-closing-comp": "off",
   },
   globals: {
     __IS_DEV__: true,

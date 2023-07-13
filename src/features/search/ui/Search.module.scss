@@ -6,6 +6,13 @@
     align-items: center;
     justify-content: space-between;
     width:600px;
+    transition: box-shadow 0.3s ease;
+    font-size:14px;
+
+    &_focused {
+        box-shadow: 0 0 7px -2px rgb(34 60 80 / 20%);
+        transition: box-shadow 0.3s ease;
+    }
 
     & input {
         background:none;
@@ -18,9 +25,11 @@
     }
 }
 
+
 @media(width <=1350px) {
     .search {
         width:100%;
         margin-top:20px;
     }
 }
+

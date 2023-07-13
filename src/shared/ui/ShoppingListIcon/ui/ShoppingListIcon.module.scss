@@ -1,0 +1,48 @@
+.icon {
+    transition: all 0.3s;
+}
+
+.wrapper {
+    box-shadow: 0 0 15px -2px rgb(34 60 80 / 20%);
+    position: fixed;
+    right: 100px;
+    top: 150px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+        box-shadow: 0 0 20px -2px rgb(34 60 80 / 30%);
+        transition: all 0.3s;
+
+        .icon {
+            transition: all 0.3s;
+            color: #80caff;
+        }
+    }
+}
+
+.shopppingList {
+    display: flex;
+    padding: 15px 7px 15px 15px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        background-color: #94d2ff;
+        position: relative;
+        top: -9px;
+        right: 0;
+        border-radius: 50px;
+    }
+}
+
+
+
+@media(width <=1350px)  {
+    .wrapper {
+        display:none;
+    }
+}

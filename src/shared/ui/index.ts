@@ -1,6 +1,15 @@
+<<<<<<<< <Temporary merge branch 1
 import { Logo } from "./logo/Logo";
 import { BurgerMenu } from "./burgerMenu/BurgerMenu";
 import { LogoDrawer } from "./logoDrawer/LogoDrawer";
-import { Button, ThemeButton } from "./button/Button";
+import { CuisinesSliderCard } from "./cuisinesSliderCard/CuisinesSliderCard";
 
-export { Logo, LogoDrawer, BurgerMenu, Button, ThemeButton };
+export {
+  Logo,
+  LogoDrawer,
+  BurgerMenu,
+  Button,
+  withSlider,
+  ThemeButton,
+  CuisinesSliderCard,
+};

@@ -7,24 +7,26 @@
     transition: all 0.45s;
     left: 0;
     z-index: 5;
+    background: rgb(0 0 0 / 60%);
 }
 
 .blurOpen {
     top: 0;
     width: 100vw;
     height: 100vh;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(1px);
     position: absolute;
     transition: all 0.45s;
     left: 0 ;
     z-index: 5;
+    background: rgb(0 0 0 / 60%);
 }
 
 .container {
     position: fixed;
-    width: 100%;
+    width: 60%;
     height: 100%;
-    right: 0;
+    left: 0;
     top: 0;
     z-index: 5;
     background: #fff;
@@ -32,7 +34,6 @@
     transition: all 0.45s;
     display: flex;
     flex-direction: column;
-    padding-left: 25%;
     font-family:  Roboto, sans-serif;
 
     @media (width <= 830px) {
@@ -50,17 +51,16 @@
 
 .containerOpen {
     position: fixed;
-    width: 100%;
+    width: 60%;
     height: 100%;
-    right: 0;
+    left: 0;
     top: 0;
     z-index: 5;
     background: #fff;
-    transform:translate(-40%);
+    transform:translate(0%);
     transition: all 0.45s;
     display: flex;
     flex-direction: column;
-    padding-left: 40%;
     font-family:  Roboto, sans-serif;
     box-shadow: 0 0 2em rgb(0 0 0 / 12%);
 }
@@ -118,7 +118,7 @@
             align-items: center;
             margin-bottom: 15px;
             padding-left:9px;
-
+          
             & svg {
                 margin-right:10px;
             }
@@ -130,10 +130,16 @@
             margin-bottom: 15px;
             padding-left:6px;
             border-left: 3px solid #85ccff;
-         
+           
             & svg {
                 margin-right:10px;
             }
         }
     }
+}
+
+.footerImage {
+    height: inherit;
+    display: flex;
+    align-items: end;
 }
