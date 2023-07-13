@@ -1,0 +1,29 @@
+.header {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media(width <=1850px) {
+    .header {
+        margin: 0 150px;
+    }
+}
+
+@media(width <=1550px) {
+    .header {
+        margin: 0 225px;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media(width <=750px) {
+    .header {
+        margin: 0 20px;
+    }
+}
+
+
+

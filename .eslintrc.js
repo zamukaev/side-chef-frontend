@@ -42,6 +42,8 @@ module.exports = {
     "arrow-body-style": "off",
     "object-curly-newline": "off",
     "no-useless-concat": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
   },
   globals: {
     __IS_DEV__: true,
