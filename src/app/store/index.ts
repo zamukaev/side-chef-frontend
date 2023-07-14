@@ -1,4 +1,4 @@
 import { rootReducer } from "./rootReducer";
-import { store, TypeRootState, useAppDispatch } from "./store";
+import { store, useAppDispatch } from "./store";
 
-export { store, rootReducer, TypeRootState, useAppDispatch };
+export { store, rootReducer, useAppDispatch };
