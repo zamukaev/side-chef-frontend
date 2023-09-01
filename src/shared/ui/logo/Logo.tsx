@@ -9,14 +9,14 @@ interface ILogoProps {
 }
 
 export const Logo: FC<ILogoProps> = ({ handleDrawerClick }) => {
-  return (
-    <div className={styles.logo}>
-      <BurgerMenu handleDrawerClick={handleDrawerClick} />
-      <img alt="logo" src="./logo.svg" />
-      <div className={styles.text}>
-        SIDE
-        <b>CHEF</b>
-      </div>
-    </div>
-  );
+    return (
+        <div className={styles.logo}>
+            <BurgerMenu handleDrawerClick={handleDrawerClick} />
+            <img alt="logo" src="./logo.svg" />
+            <div className={styles.text}>
+                SIDE
+                <b>CHEF</b>
+            </div>
+        </div>
+    );
 };
