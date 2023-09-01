@@ -1,0 +1,17 @@
+.grade {
+    display:flex;
+    align-items: center;
+
+    &__countReviews {
+        margin-left:15px;
+        text-decoration: underline rgb(172 172 172);
+        font-size:14px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+            transition: all 0.3s;
+            color:rgb(105 105 105);
+        }
+    }
+}

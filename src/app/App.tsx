@@ -13,7 +13,6 @@ const App = () => {
   return (
     <div className={`app  ${theme}`}>
       <AppRouter />
-      <ThemeSwitcher />
     </div>
   );
 };

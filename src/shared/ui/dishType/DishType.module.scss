@@ -1,0 +1,23 @@
+.dishType {
+    padding: 8px 25px;
+    background: none;
+    border: 1.5px solid #3a9691;
+    color: #4D4D4D;
+    margin-right: 10px;
+    height: 35px;
+    border-radius: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:last-child {
+        margin-right:0;
+    }
+
+    &:hover {
+        transition: all 0.3s;
+        background: #d3eeed;
+        border: 1.5px solid #3a9691;
+    }
+}

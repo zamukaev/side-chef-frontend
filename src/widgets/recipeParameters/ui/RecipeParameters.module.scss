@@ -1,0 +1,51 @@
+.recipeParameters {
+    border-top:1px solid rgb(226 226 226);
+    padding-top:50px;
+
+    &__available {
+        display:flex;
+        margin-bottom:50px;
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size:20px;
+        margin-bottom:30px;
+    }
+
+    &__subtitle {
+        margin-top:-20px;
+        font-size:15px;
+        color:#4D4D4D; 
+        width: max-content;   
+
+        & span {
+            text-decoration:underline;
+            cursor: pointer;
+            transition: all 0.3s;
+            
+            &:hover {
+                transition: all 0.3s;
+                color: #020202; 
+            }
+        }
+    }
+}
+
+.ingredients {
+    margin-right:100px;
+
+    &__header {
+        display:flex;
+    }
+}
+
+.additionally {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nutritions {
+    display:flex;
+}

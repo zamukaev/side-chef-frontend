@@ -1,0 +1,27 @@
+.measures {
+    display:flex;
+    margin-left:120px;
+}
+
+.measure {
+    cursor: pointer;
+    font-size:16px;
+    font-weight: 500;
+    color: #bababa;
+    padding-right: 8px;
+    background: none;
+    height: min-content;
+    transition: all 0.3s;
+
+    &__active {
+        color: #3a9691;
+        transition: all 0.3s;
+    }
+
+}
+
+.delimiter {
+    padding-right: 8px;
+    font-size: 18px;
+    color: #bababa;
+}

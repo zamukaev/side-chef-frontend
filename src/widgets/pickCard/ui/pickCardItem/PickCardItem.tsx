@@ -11,7 +11,10 @@ export const PickCardItem: FC<PickCardItemProps> = ({
   pick,
 }) => {
   return (
-    <Link to="/recipe/1" className={`${styles[cardType]} ${className}`}>
+    <Link
+      to={`/recipe/${pick.id}`}
+      className={`${styles[cardType]} ${className}`}
+    >
       <div className={styles.cardImage}>
         <img src={pick.image} alt="" />
       </div>

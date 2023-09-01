@@ -1,107 +1,108 @@
+import { measuresItems } from "features/measures/ui/Measures";
 import { ReactNode } from "react";
 
 export interface IExtendedIngredients {
-  "id": number,
-  "aisle": string,
-  "image": string,
-  "consistency": string,
-  "name": string,
-  "nameClean": string,
-  "original": string,
-  "originalName": string,
-  "amount": number,
-  "unit": string,
-  "meta": Array<any>,
-  "measures": {
-    "us": {
-      "amount": number,
-      "unitShort": string,
-      "unitLong": string
-    },
-    "metric": {
-      "amount": number,
-      "unitShort": string,
-      "unitLong": string
-    }
-  }
+  id: number;
+  aisle: string;
+  image: string;
+  consistency: string;
+  name: string;
+  nameClean: string;
+  original: string;
+  originalName: string;
+  amount: number;
+  unit: string;
+  meta: Array<any>;
+  measures: {
+    us: {
+      amount: number;
+      unitShort: string;
+      unitLong: string;
+    };
+    metric: {
+      amount: number;
+      unitShort: string;
+      unitLong: string;
+    };
+  };
 }
 
 export interface ISteps {
-  "number": number,
-  "step": string,
-  "ingredients": [
+  number: number;
+  step: string;
+  ingredients: [
     {
-      "id": number,
-      "name": string,
-      "localizedName": string,
-      "image": string
-    }
-  ],
-  "equipment": [
+      id: number;
+      name: string;
+      localizedName: string;
+      image: string;
+    },
+  ];
+  equipment: [
     {
-      "id": number,
-      "name": string,
-      "localizedName": string,
-      "image": string
+      id: number;
+      name: string;
+      localizedName: string;
+      image: string;
     },
     {
-      "id": number,
-      "name": string,
-      "localizedName": string,
-      "image": string
-    }
-  ],
-  "length": {
-    "number": number,
-    "unit": string
-  }
+      id: number;
+      name: string;
+      localizedName: string;
+      image: string;
+    },
+  ];
+  length: {
+    number: number;
+    unit: string;
+  };
 }
 
 export interface IAnalyzedInstructions {
-  "name": string,
-  "steps": Array<ISteps>
+  name: string;
+  steps: Array<ISteps>;
 }
 
 export interface IVegetarianPicsTypes {
-  "vegetarian": boolean,
-  "vegan": boolean,
-  "glutenFree": boolean,
-  "dairyFree": boolean,
-  "veryHealthy": boolean,
-  "cheap": boolean,
-  "veryPopular": boolean,
-  "sustainable": boolean,
-  "lowFodmap": boolean,
-  "weightWatcherSmartPoints": number,
-  "gaps": "no",
-  "preparationMinutes": number,
-  "cookingMinutes": number,
-  "aggregateLikes": number,
-  "healthScore": number,
-  "creditsText": string,
-  "license": string,
-  "sourceName": string,
-  "pricePerServing": number,
-  "extendedIngredients": Array<any>,
-  "id": number,
-  "title": string,
-  "readyInMinutes": number,
-  "servings": number,
-  "sourceUrl": string,
-  "image": string,
-  "imageType": string,
-  "summary": string,
-  "cuisines": Array<any>,
-  "dishTypes": Array<string>,
-  "diets": Array<string>,
-  "occasions": Array<any>,
-  "instructions": string,
-  "analyzedInstructions": Array<any>,
-  "originalId": null,
-  spoonacularSourceUrl?: string,
+  vegetarian: boolean;
+  vegan: boolean;
+  glutenFree: boolean;
+  dairyFree: boolean;
+  veryHealthy: boolean;
+  cheap: boolean;
+  veryPopular: boolean;
+  sustainable: boolean;
+  lowFodmap: boolean;
+  weightWatcherSmartPoints: number;
+  gaps: "no";
+  preparationMinutes: number;
+  cookingMinutes: number;
+  aggregateLikes: number;
+  healthScore: number;
+  creditsText: string;
+  license: string;
+  sourceName: string;
+  pricePerServing: number;
+  extendedIngredients: Array<any>;
+  id: number;
+  title: string;
+  readyInMinutes: number;
+  servings: number;
+  sourceUrl: string;
+  image: string;
+  imageType: string;
+  summary: string;
+  cuisines: Array<any>;
+  dishTypes: Array<string>;
+  diets: Array<string>;
+  occasions: Array<any>;
+  instructions: string;
+  analyzedInstructions: Array<any>;
+  originalId: null;
+  spoonacularSourceUrl?: string;
 }
 export interface IRecipes {
-  recipes: IVegetarianPicsTypes[]
+  recipes: IVegetarianPicsTypes[];
 }
 
 export type CardType = "vegetarian" | "trending";
@@ -117,10 +118,55 @@ export interface PickCardProps {
   cardType?: CardType;
   headline?: string;
   slidesPerView?: number;
-  spaceBetween?: number
+  spaceBetween?: number;
   picks?: IVegetarianPicsTypes[];
 }
 
 export interface SliderProps extends PickCardProps {
   children?: ReactNode;
+}
+
+export interface ILogoProps {
+  handleDrawerClick: () => void;
+}
+
+export interface IEditGradeProps {
+  reviews?: boolean;
+}
+
+export interface IIngredientProps {
+  original: string;
+  originalName: string;
+  selectedMeasure: measuresItems;
+  metric: {
+    amount: number;
+    unitShort: string;
+    unitLong: string;
+  };
+}
+
+export interface IDietProps {
+  name: string;
+}
+export interface IDishTypeProps {
+  name: string;
+}
+
+export enum StandartNutrition {
+  calories = 2000,
+  carbs = 180,
+  fat = 100,
+  protein = 56,
+  fiber = 30,
+  potassium = 2500,
+}
+
+export interface INutritionProps {
+  nutrition: any;
+  block?: boolean;
+}
+
+export interface IGradeProps {
+  count: number;
+  reviews?: boolean;
 }
