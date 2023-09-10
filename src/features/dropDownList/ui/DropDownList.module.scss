@@ -1,6 +1,6 @@
 .dropDownList{
     position: relative;
-    padding-top: 21px;
+    padding:20px 18px 0;
 
     .listLabel{
         position: relative;
@@ -72,19 +72,34 @@
         position: absolute;
         opacity: 0;
         visibility: hidden;
-        left: 0;
+        left: 18px;
         top: 50px;
-        transition: all 0.3s ease-in;
+        transition: all 0.2s ease-in;
+       
 
         .listItem{
-        
+            flex-grow: 1;
+            display:flex;
+            align-items: center;
+            justify-content: space-between;
+          
+
+            .closeIcon{
+                margin-left: 5px;
+            }
         } 
     }
 
     .list.opened{
+        position:absolute;
         top: 70px;
-        left: 0;
+        left: 18px;
         opacity: 1;
         visibility:visible;
+        
     }
+}
+
+.text.checked{
+    text-decoration: line-through;
 }

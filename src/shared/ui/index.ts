@@ -5,6 +5,7 @@ import { CuisinesSliderCard } from "./cuisinesSliderCard/CuisinesSliderCard";
 import { Button, ThemeButton } from "./button/Button";
 import { withSlider } from "./withSlider/withSlider";
 import { CloseIcon } from "./closeIcon/CloseIcon";
+import { Checkbox } from "./checkbox/Checkbox";
 
 export {
     Logo,
@@ -15,4 +16,5 @@ export {
     ThemeButton,
     CuisinesSliderCard,
     CloseIcon,
+    Checkbox,
 };
