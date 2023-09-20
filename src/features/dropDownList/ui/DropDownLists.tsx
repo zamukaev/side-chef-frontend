@@ -10,7 +10,7 @@ export const DropDownLists: FC<DropDownListsProps> = (props) => {
   const { className } = props;
   return (
     <section className={styles.dropDownList}>
-      <DropDownList />
+      <DropDownList className={className} />
     </section>
   );
 };

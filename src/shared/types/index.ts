@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ChangeEvent, ReactNode } from "react";
 
 export interface IExtendedIngredients {
   "id": number,
@@ -123,4 +123,16 @@ export interface PickCardProps {
 
 export interface SliderProps extends PickCardProps {
   children?: ReactNode;
+}
+export interface CheckboxProps extends ChangeEvent {
+  className?: string;
+  children?: ReactNode;
+  onChange?: (velue: boolean) => void;
+}
+
+export interface CloseIconProps {
+  className?: string;
+  color?: string;
+  size?: number
+  onClick?: () => void;
 }
