@@ -7,15 +7,15 @@ import { AppRouter } from "./providers/router";
 import "./styles/index.scss";
 
 const App = () => {
-    const { t } = useTranslation();
-    const { theme } = useTheme();
+  const { t } = useTranslation();
+  const { theme } = useTheme();
 
-    return (
-        <div className={`app  ${theme}`}>
-            <AppRouter />
-            <ThemeSwitcher />
-        </div>
-    );
+  return (
+    <div className={`app  ${theme}`}>
+      <AppRouter />
+      <ThemeSwitcher />
+    </div>
+  );
 };
 
 export default App;

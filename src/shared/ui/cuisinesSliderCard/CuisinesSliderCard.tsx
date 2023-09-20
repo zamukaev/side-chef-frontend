@@ -9,12 +9,12 @@ interface ICuisinesSliderCardProps {
 }
 
 export const CuisinesSliderCard: FC<ICuisinesSliderCardProps> = ({
-    cuisine,
+  cuisine,
 }) => {
-    return (
-        <div className={styles.cuisine}>
-            <img alt="" src={cuisine.src} className={styles.image} />
-            <p className={styles.name}>{cuisine.name}</p>
-        </div>
-    );
+  return (
+    <div className={styles.cuisine}>
+      <img alt="" src={cuisine.src} className={styles.image} />
+      <p className={styles.name}>{cuisine.name}</p>
+    </div>
+  );
 };

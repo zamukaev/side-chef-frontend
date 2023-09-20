@@ -8,17 +8,17 @@ import { toggleShoppingListModal } from "entities/modals";
 import styles from "./ShoppingListIcon.module.scss";
 
 export const ShoppingListIcon = () => {
-    const dispatch = useAppDispatch();
+  const dispatch = useAppDispatch();
 
-    const handleClick = () => {
-        dispatch(toggleShoppingListModal());
-    };
+  const handleClick = () => {
+    dispatch(toggleShoppingListModal());
+  };
 
-    return (
-        <div className={styles.wrapper} onClick={handleClick}>
-            <div className={styles.shopppingList}>
-                <BiBook size={24} className={styles.icon} />
-            </div>
-        </div>
-    );
+  return (
+    <div className={styles.wrapper} onClick={handleClick}>
+      <div className={styles.shopppingList}>
+        <BiBook size={24} className={styles.icon} />
+      </div>
+    </div>
+  );
 };

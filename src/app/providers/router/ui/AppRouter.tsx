@@ -7,22 +7,22 @@ import { Header } from "widgets/header";
 import { ShoppingList } from "features/shoppingList/ShoppingList";
 
 function AppRouter() {
-    return (
-        <Suspense fallback={<div>Loading...</div>}>
-            <Header />
-            <ShoppingListIcon />
-            <ShoppingList />
-            <Routes>
-                {Object.values(routeConfigPublic).map(({ path, element }) => (
-                    <Route
-                        key={path}
-                        path={path}
-                        element={<div className="page-wrapper">{element}</div>}
-                    />
-                ))}
-            </Routes>
-        </Suspense>
-    );
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <Header />
+      <ShoppingListIcon />
+      <ShoppingList />
+      <Routes>
+        {Object.values(routeConfigPublic).map(({ path, element }) => (
+          <Route
+            key={path}
+            path={path}
+            element={<div className="page-wrapper">{element}</div>}
+          />
+        ))}
+      </Routes>
+    </Suspense>
+  );
 }
 
 export default AppRouter;

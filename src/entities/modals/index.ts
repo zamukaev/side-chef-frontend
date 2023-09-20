@@ -1,7 +1,7 @@
 import {
-    modalSlice,
-    toggleBurgerMenuModal,
-    toggleShoppingListModal,
+  modalSlice,
+  toggleBurgerMenuModal,
+  toggleShoppingListModal,
 } from "./model/slice";
 
 export { modalSlice, toggleBurgerMenuModal, toggleShoppingListModal };

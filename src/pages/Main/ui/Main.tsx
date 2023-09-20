@@ -14,39 +14,39 @@ interface MainProps {
 }
 
 const Main: FC<MainProps> = (props) => {
-    const { className } = props;
+  const { className } = props;
 
-    const [vegetarianPicks, setVegetarianPicks] = useState<
+  const [vegetarianPicks, setVegetarianPicks] = useState<
     IVegetarianPicsTypes[]
   >([]);
 
-    const getVegetarianPicks = async () => {
+  const getVegetarianPicks = async () => {
     // const { data } = await axios.get<IRecipes>("https://side-chef-api.vercel.app/api/vegetarian");
-        setVegetarianPicks(Picks);
-    };
+    setVegetarianPicks(Picks);
+  };
 
-    useEffect(() => {
-        getVegetarianPicks();
-    }, []);
-    return (
-        <main className={styles.main}>
-            <Cuisines />
-            <PickCard
-                cardType="vegetarian"
-                headline="Our Vegetarian Picks"
-                slidesPerView={4}
-                spaceBetween={10}
-                picks={Picks}
-            />
-            <PickCard
-                cardType="trending"
-                headline="Trending"
-                spaceBetween={40}
-                slidesPerView={5}
-                picks={Picks}
-            />
-        </main>
-    );
+  useEffect(() => {
+    getVegetarianPicks();
+  }, []);
+  return (
+    <main className={styles.main}>
+      <Cuisines />
+      <PickCard
+        cardType="vegetarian"
+        headline="Our Vegetarian Picks"
+        slidesPerView={4}
+        spaceBetween={10}
+        picks={Picks}
+      />
+      <PickCard
+        cardType="trending"
+        headline="Trending"
+        spaceBetween={40}
+        slidesPerView={5}
+        picks={Picks}
+      />
+    </main>
+  );
 };
 
 export default Main;

@@ -12,4 +12,10 @@
     "cSpell.words": [
         "resipes"
     ],
+    "editor.insertSpaces": true,
+    "files.autoSave": "onFocusChange",
+    "workbench.editor.enablePreview": true,
+    "editor.bracketPairColorization.enabled": false,
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+    "editor.tabSize": 2,
 }

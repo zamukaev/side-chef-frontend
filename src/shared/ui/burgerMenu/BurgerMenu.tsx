@@ -8,9 +8,9 @@ interface IBurgerMenuProps {
 }
 
 export const BurgerMenu: FC<IBurgerMenuProps> = ({ handleDrawerClick }) => {
-    return (
-        <div className={styles.burgerMenu} onClick={handleDrawerClick}>
-            <BiMenu size={24} />
-        </div>
-    );
+  return (
+    <div className={styles.burgerMenu} onClick={handleDrawerClick}>
+      <BiMenu size={24} />
+    </div>
+  );
 };

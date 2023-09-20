@@ -8,13 +8,13 @@ import { CloseIcon } from "./closeIcon/CloseIcon";
 import { Checkbox } from "./checkbox/Checkbox";
 
 export {
-    Logo,
-    LogoDrawer,
-    BurgerMenu,
-    Button,
-    withSlider,
-    ThemeButton,
-    CuisinesSliderCard,
-    CloseIcon,
-    Checkbox,
+  Logo,
+  LogoDrawer,
+  BurgerMenu,
+  Button,
+  withSlider,
+  ThemeButton,
+  CuisinesSliderCard,
+  CloseIcon,
+  Checkbox,
 };
