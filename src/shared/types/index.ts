@@ -124,7 +124,7 @@ export interface PickCardProps {
 export interface SliderProps extends PickCardProps {
   children?: ReactNode;
 }
-export interface CheckboxProps extends ChangeEvent {
+export interface CheckboxProps {
   className?: string;
   children?: ReactNode;
   onChange?: (velue: boolean) => void;

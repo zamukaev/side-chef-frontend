@@ -8,7 +8,7 @@ import { useOnClickOutside, useTypedSelector } from "shared/hooks";
 import { toggleShoppingListModal } from "entities/modals";
 import { useAppDispatch } from "app/store";
 import { DropDownLists } from "features/dropDownList";
-import Image from "../../shared/assets/bg-image/1.png";
+
 import styles from "./ShoppingList.module.scss";
 
 const show = {

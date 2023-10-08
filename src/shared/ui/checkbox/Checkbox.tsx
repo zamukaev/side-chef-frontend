@@ -1,6 +1,6 @@
 import { ChangeEvent, FC } from "react";
-
 import { CheckboxProps } from "shared/types";
+
 import styles from "./Checkbox.module.scss";
 
 export const Checkbox: FC<CheckboxProps> = (props) => {

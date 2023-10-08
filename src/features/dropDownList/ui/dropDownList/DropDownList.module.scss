@@ -3,6 +3,7 @@
     margin-bottom: 20px;
 
     .headline{
+        z-index: 5;
         font-size: 18px;
         line-height: 26px;
         font-weight: 500;
@@ -68,8 +69,9 @@
 
 .list{
     margin-top: 20px;
-    position: absolute;
-    transition: margin 0.2s ease-out;   
+    margin-bottom: -70px;
+
+    // position: absolute;
 
     .listItem{
         flex-grow: 1;
@@ -83,31 +85,78 @@
         line-height: 24px;
         opacity: 0;
         visibility: hidden;
-        transition: opacity 1s ease; 
+        transition: all 0.3s ease;
+ 
+        .checkIcon{
+            cursor: pointer;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .uncheckIcon{
+            cursor: pointer;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .checkIcon.checked{
+            position: static;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .uncheckIcon.checked{
+            position: static;
+            opacity: 1;
+            visibility: visible;
+        }
 
         .closeIcon{
             margin-left: 5px;
             cursor: pointer;
         }
-
-        .checkIcon{
-            cursor: pointer;
-        }
     } 
+
+    .listItem.opened{
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .list.opened{
-    opacity: 1;
-    visibility:visible;
-    position: static;
+    margin-bottom: 0;
+}
 
-    .listItem{
-        opacity: 1;
-        visibility: visible;
-        transition: all 1s ease; 
+.text{
+    position: relative;
+
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 50px;
+        height: 1px;
+        background: gray;
+        opacity: 0;
+        visibility: hidden;
     }
 }
 
 .text.checked{
-    text-decoration: line-through;
+    &::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 50px;
+        height: 1px;
+        background: gray;
+        opacity: 1;
+        visibility: visible;
+    }
+
 }
+

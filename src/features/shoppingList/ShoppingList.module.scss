@@ -1,199 +1,206 @@
 .blur {
-    top: 0;
-    width:0;
-    height: 100vh;
-    backdrop-filter: blur(0);
-    position: absolute;
-    transition: all 0.45s;
-    left: 0;
-    z-index: 5;
-    background: rgb(0 0 0 / 60%);
+  top: 0;
+  width:0;
+  height: 100vh;
+  backdrop-filter: blur(0);
+  position: absolute;
+  transition: all 0.45s;
+  left: 0;
+  z-index: 5;
+  background: rgb(0 0 0 / 60%);
 }
 
 .blurOpen {
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    backdrop-filter: blur(1px);
-    position: absolute;
-    transition: all 0.45s;
-    left: 0 ;
-    z-index: 5;
-    background: rgb(0 0 0 / 60%);
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(1px);
+  position: absolute;
+  transition: all 0.45s;
+  left: 0 ;
+  z-index: 5;
+  background: rgb(0 0 0 / 60%);
 }
 
 .container {
-    position: fixed;
-    width: 20%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    z-index: 5;
-    background: #fff;
-    transform: translate(100%);
-    transition: all 0.45s;
-    display: flex;
-    flex-direction: column;
-    font-family:  Roboto, sans-serif;
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  z-index: 5;
+  background: #fff;
+  transform: translate(100%);
+  transition: all 0.45s;
+  display: flex;
+  flex-direction: column;
+  font-family:  Roboto, sans-serif;
   
 
-    @media (width <= 830px) {
-        padding-left: 20%;
-    }
+  @media (width <= 830px) {
+    padding-left: 20%;
+  }
 
-    @media (width <= 600px) {
-        padding-left: 10%;
-    }
+  @media (width <= 600px) {
+    padding-left: 10%;
+  }
 
-    @media (width <= 450px) {
-        padding-left: 5%;
-    }
+  @media (width <= 450px) {
+    padding-left: 5%;
+  }
 }
 
 .containerOpen {
-    position: fixed;
-    width: 20%;
-    height: 100%;
-    right: 0;
-    top: 0;
-    border-radius: 10px 0 0 10px;
-    z-index: 5;
-    background:#fff; 
-    transform:translate(0%);
-    transition: all 0.45s;
-    display: flex;
-    flex-direction: column;
-    font-family:  Roboto, sans-serif;
-    box-shadow: 0 0 2em rgb(0 0 0 / 12%);
+  position: fixed;
+  width: 20%;
+  height: 100%;
+  right: 0;
+  top: 0;
+  border-radius: 10px 0 0 10px;
+  z-index: 5;
+  background:#fff; 
+  transform:translate(0%);
+  transition: all 0.45s;
+  display: flex;
+  flex-direction: column;
+  font-family:  Roboto, sans-serif;
+  box-shadow: 0 0 2em rgb(0 0 0 / 12%);
  
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    padding:20px 18px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding:20px 18px 0;
     
 
-    .headline{
-        color: #393939;
-        font-style: normal;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 24px;
-        border-bottom: 2px solid #C5E4FA;
-    }
+  .headline{
+    color: #393939;
+    font-style: normal;
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 24px;
+    border-bottom: 2px solid #C5E4FA;
+  }
 
-    .closeIcon{
-        margin-left: 0 auto;
-        color:#BABABA;
-    }
+  .closeIcon{
+    margin-left: 0 auto;
+    color:#BABABA;
+  }
    
 }
 
 .nav {
-    &_item {
-        display:flex;
-        align-items: center;
-        justify-content: space-between;
-        font-weight: 500;
-        color:#282828;
-        border-top: 0.5px solid #E6E6E6;
-        padding: 10px;
+  &_item {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    color:#282828;
+    border-top: 0.5px solid #E6E6E6;
+    padding: 10px;
 
-        &__icon {
-            transition: all 300ms;
-        }
+    &__icon {
+      transition: all 300ms;
+    }
         
-        &__iconRotate {
-            transform: rotate(90deg);
-            transition: all 300ms;
-        }
-
-        &:first-child {
-            border-top:none;
-        } 
+    &__iconRotate {
+      transform: rotate(90deg);
+      transition: all 300ms;
     }
 
-    &_menuList {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 1s ease;
-        font-weight: 500;
-        font-size: 12px;
+    &:first-child {
+      border-top:none;
+    } 
+  }
 
-        &__expanded {
-            max-height: 400px;
-            overflow: hidden;
-            transition: max-height 1s ease;
-            font-weight: 500;
-            font-size: 12px; 
-        }
+  &_menuList {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s ease;
+    font-weight: 500;
+    font-size: 12px;
 
-        &__item {
-            display:flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-left:9px;
+    &__expanded {
+      max-height: 400px;
+      overflow: hidden;
+      transition: max-height 1s ease;
+      font-weight: 500;
+      font-size: 12px; 
+    }
+
+    &__item {
+      display:flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-left:9px;
           
-            & svg {
-                margin-right:10px;
-            }
-        }
-
-        &__itemActive {
-            display:flex;
-            align-items: center;
-            margin-bottom: 15px;
-            padding-left:6px;
-            border-left: 3px solid #85ccff;
-           
-            & svg {
-                margin-right:10px;
-            }
-        }
+      & svg {
+        margin-right:10px;
+      }
     }
+
+    &__itemActive {
+      display:flex;
+      align-items: center;
+      margin-bottom: 15px;
+      padding-left:6px;
+      border-left: 3px solid #85ccff;
+           
+      & svg {
+        margin-right:10px;
+      }
+    }
+  }
 }
 
 .shoppingList{
-    position: relative;
-    padding: 0 10px;
-    cursor: pointer;
+  position: relative;
+  padding: 0 10px;
+  cursor: pointer;
 
-    .title{
-        display: flex;
-        align-items: start;
+  .title{
+    display: flex;
+    align-items: start;
 
-    }   
+  }   
 }   
 
 .shoppingListItem{
-    position: absolute;
-    margin-top: 10px;
-    transition: all 0.3s ease;
+  position: absolute;
+  margin-top: 10px;
+  transition: all 0.3s ease;
  
 }
 
 .shoppingListItem.closed{
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .shoppingListItem.opened{
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .text{
-    margin: 0 5px;
+  margin: 0 5px;
     
 }
 
 .bgImage{
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin-top: 40px;
- 
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-top: 40px;
+
+  img{
+    width: 250px;
+  };
 }
